@@ -1,0 +1,12 @@
+$primaryColor: #79f;
+$secondaryColor: #329;
+$fontHeader: Helvetica, sans-serif;
+
+h1 {
+  font: 2em $fontHeader;
+  color: $secondaryColor;
+}
+
+body {
+  background-color: $primaryColor;
+}
