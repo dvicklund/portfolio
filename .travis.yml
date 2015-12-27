@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - '4.2'
+deploy:
+  provider: heroku
+  api_key:
+    secure: AHQ3+XqtKFH8+6oAb8bdH5TCgG5G+1VwtNCedzdsO3/4u5Zecxj3J46ohMKRw3JZfheCE/Zo/wzLjigJlYqH2l8TZLBtQsIRkU2+DltiWEW/QfJyuOifsQImueDEH4g754d9ssnggHRJq6fJUVPZr9m83zayR8+9H8x7KECqSfTKolB9xHSaY3E//ev4S7flHrWEN5DF/5NAQuuaJ7k2tRP82l+EihZdJ8Ij9dhCnBxJh3JtfP573WPkwEeXXBS4LTGNrPTZ5XhzlZxWfI54HtOz9dQrPW3WpBATcpi6M3pM7VIceFYecGXqZuQCrv/h5kHy/nVwr69e4Baxcz5J0ZsRlKaDNfgZPIeW+GXAGtSwA3fSJglQ0mqw44mYxjXPHpHLRPmXmYvLxce6M8B57KCLxWt+csXQ0remWbwBdcPS8EZjz8VVH3ZKZ5jde1u1vhi8Vcq8MSN74GOInxkB0EbKIz3tvpxLjXCKwqQXuXsQMrCWAoa5FscG+uItC6BxWiexSA+6YH5Ac0HgTd1Jjd6xt7HRNbgKaUlX4xq24AcheIeXLXgAbG45J1sot+vB5pPmHwbK7b1NMXH+mIGZspZIsHyl4yvwpPSf+JRe+e+VZSagwdCTQS+kqBLfBzCgey1YYDyVcDB9kirsoLExsyshecLbpdYPMe4etRNTmw0=
+  app: vicklund
