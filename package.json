@@ -1,0 +1,22 @@
+{
+  "name": "vicklund-portfolio",
+  "version": "0.0.1",
+  "description": "A professional showcase of excellence featuring David",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "gulp test:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvicklund/portfolio.git"
+  },
+  "author": "david@vicklund.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvicklund/portfolio/issues"
+  },
+  "homepage": "https://github.com/dvicklund/portfolio#readme"
+}
