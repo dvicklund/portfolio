@@ -3,7 +3,9 @@ h1 {
   color: #329; }
 
 body {
-  background-color: #79f; }
+  background-color: black;
+  color: green;
+  font: 1em Courier, serif; }
 
 body {
   display: flex;

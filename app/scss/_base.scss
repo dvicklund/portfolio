@@ -1,6 +1,7 @@
 $primaryColor: #79f;
 $secondaryColor: #329;
 $fontHeader: Helvetica, sans-serif;
+$fontBody: Courier, serif;
 
 h1 {
   font: 2em $fontHeader;
@@ -8,5 +9,7 @@ h1 {
 }
 
 body {
-  background-color: $primaryColor;
+  background-color: black;
+  color: green;
+	font: 1em $fontBody;
 }
