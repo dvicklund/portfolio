@@ -1,3 +1,3 @@
 module.exports = function(app) {
-	//require('/folder/directive')(app);
+	require('./directives/headerDirective')(app);
 };

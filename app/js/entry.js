@@ -1,7 +1,7 @@
 require('angular/angular');
 var angular = window.angular;
 
-var portApp = angular.module('PortApp', ['ngRoute']);
+var portApp = angular.module('PortApp', []);
 
-require('./controllers/controllers')(portApp);
-require('./directives/directives')(portApp);
+require('./controllers')(portApp);
+require('./directives')(portApp);
