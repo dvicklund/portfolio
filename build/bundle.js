@@ -29090,6 +29090,7 @@
 
 	module.exports = function(app) {
 		__webpack_require__(4)(app);
+		__webpack_require__(5)(app);
 	};
 
 /***/ },
@@ -29097,14 +29098,27 @@
 /***/ function(module, exports) {
 
 	module.exports = function(app) {
-		app.directive('headerDirective', function() {
+		app.directive('heading', function() {
 			return {
-				restrict: 'AC',
+				restrict: 'EAC',
 				templateUrl: 'templates/header.html',
 				scope: {
 					headingText: '='
 				}
-			}
+			};
+		});
+	};
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	module.exports = function(app) {
+		app.directive('welcome', function() {
+			return {
+				restrict: 'E',
+				templateUrl: 'templates/welcome.html',
+			};
 		});
 	};
 

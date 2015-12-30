@@ -1,11 +1,11 @@
 module.exports = function(app) {
-	app.directive('headerDirective', function() {
+	app.directive('heading', function() {
 		return {
-			restrict: 'AC',
+			restrict: 'EAC',
 			templateUrl: 'templates/header.html',
 			scope: {
 				headingText: '='
 			}
-		}
+		};
 	});
 };

@@ -1,15 +1,21 @@
-$primaryColor: #79f;
-$secondaryColor: #329;
-$fontHeader: Helvetica, sans-serif;
-$fontBody: Courier, serif;
+$primaryColor: limegreen;
+$secondaryColor: #0f0;
+$tertiaryColor: #2fa;
+$fontHeader: Courier, serif;
+$fontBody: Courier, sans-serif;
 
 h1 {
   font: 2em $fontHeader;
-  color: $secondaryColor;
+  color: $primaryColor;
 }
 
 body {
   background-color: black;
   color: green;
 	font: 1em $fontBody;
+}
+
+a {
+  text-decoration: none;
+  color: $secondaryColor;
 }

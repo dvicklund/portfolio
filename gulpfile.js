@@ -15,10 +15,9 @@ var paths = {
 
 gulp.task('build:css', function() {
   gulp.src('app/scss/application.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('app/css/'));
-  return gulp.src('app/css/**/*.css')
     .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(gulp.dest('app/css/'))
     .pipe(concatCss('style.min.css'))
     .pipe(minifyCss())
     .pipe(sourcemaps.write())
@@ -42,7 +41,7 @@ gulp.task('build:js', function() {
 
 gulp.task('test:mocha', function() {
 	return gulp.src(paths.test).pipe(mocha({reporter: 'nyan'}));
-})
+});
 
 gulp.task('watch:css', function() {
 	gulp.watch(paths.css, ['build:css']);
