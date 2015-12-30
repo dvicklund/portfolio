@@ -1,10 +1,14 @@
 h1 {
-  font: 2em Courier, serif;
+  font: 3em Courier, serif;
   color: limegreen; }
+
+h3 {
+  font: 1.5em Courier, serif;
+  color: #070; }
 
 body {
   background-color: black;
-  color: green;
+  color: limegreen;
   font: 1em Courier, sans-serif; }
 
 a {
@@ -16,9 +20,11 @@ body {
   flex-direction: column;
   align-items: center; }
 
+h3 {
+  margin-bottom: 0; }
+
 nav {
-  background-color: #010;
-  margin-top: 1em;
+  margin-bottom: 1em;
   text-align: center; }
 
 p {
@@ -31,6 +37,3 @@ p {
 a:hover {
   text-decoration: overline underline;
   color: #2fa; }
-
-button:hover {
-  background-color: lightblue; }

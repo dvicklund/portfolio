@@ -1,17 +1,23 @@
 $primaryColor: limegreen;
 $secondaryColor: #0f0;
 $tertiaryColor: #2fa;
+$darkColor: #070;
 $fontHeader: Courier, serif;
 $fontBody: Courier, sans-serif;
 
 h1 {
-  font: 2em $fontHeader;
+  font: 3em $fontHeader;
   color: $primaryColor;
+}
+
+h3 {
+	font: 1.5em $fontHeader;
+	color: $darkColor;
 }
 
 body {
   background-color: black;
-  color: green;
+  color: $primaryColor;
 	font: 1em $fontBody;
 }
 
