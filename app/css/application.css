@@ -25,6 +25,7 @@ p {
   padding: 0.2em 10%; }
 
 .heading {
+  width: 100%;
   text-align: center; }
 
 a:hover {
