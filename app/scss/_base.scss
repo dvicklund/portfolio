@@ -16,7 +16,9 @@ h3 {
 }
 
 body {
-  background-color: black;
+	/* Generated with http://gradient.quasi.ink */
+	background-size: cover;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAYklEQVQIWwFXAKj/AVouWv8f/A4AOggYACcODwD66ucA1/fnALgP9QABpjl8/xj6AwAI5OgAFgYAAAb/+gDuHQ8AkvTeAAHDHHP/Chf0AAYK7AAaEBUA7eb8ALbo8ADKFvsAf9Ehnd0nrw0AAAAASUVORK5CYII=");
   color: $primaryColor;
 	font: 1em $fontBody;
 }
@@ -24,4 +26,12 @@ body {
 a {
   text-decoration: none;
   color: $secondaryColor;
+}
+
+.heading {
+	background-color: rgba(0,0,0,0.5);
+}
+
+welcome {
+  background-color: rgba(0,0,0,0.5);
 }

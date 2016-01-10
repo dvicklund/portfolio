@@ -29116,11 +29116,12 @@
 	module.exports = function(app) {
 		app.directive('welcome', function() {
 			return {
-				restrict: 'E',
+				restrict: 'EC',
 				templateUrl: 'templates/welcome.html',
 			};
 		});
 	};
+
 
 /***/ }
 /******/ ]);
