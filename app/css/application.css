@@ -31,19 +31,17 @@ table {
   border-spacing: 0; }
 
 h1 {
-  font: 3em Courier, serif;
+  font: 5vh Courier, serif;
   color: limegreen; }
 
 h3 {
-  font: 1.5em Courier, serif;
+  font: 3vh Courier, serif;
   color: #070; }
 
 body {
-  /* Generated with http://gradient.quasi.ink */
-  background-size: cover;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAYklEQVQIWwFXAKj/AVouWv8f/A4AOggYACcODwD66ucA1/fnALgP9QABpjl8/xj6AwAI5OgAFgYAAAb/+gDuHQ8AkvTeAAHDHHP/Chf0AAYK7AAaEBUA7eb8ALbo8ADKFvsAf9Ehnd0nrw0AAAAASUVORK5CYII=");
+  background-color: #111;
   color: limegreen;
-  font: 1em Courier, sans-serif; }
+  font: 1.5vh Courier, sans-serif; }
 
 a {
   text-decoration: none;
@@ -79,7 +77,8 @@ h1 {
   margin-top: 3vh; }
 
 h3 {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-top: 1vh; }
 
 nav {
   margin-bottom: 1em;
@@ -95,8 +94,8 @@ p {
   border-radius: 3vh; }
 
 welcome {
-  padding: 4vh;
-  margin: 2vh auto;
+  padding: 2vh;
+  margin: 2vh 20vw;
   border-radius: 3vh; }
 
 a:hover {

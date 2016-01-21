@@ -6,21 +6,19 @@ $fontHeader: Courier, serif;
 $fontBody: Courier, sans-serif;
 
 h1 {
-  font: 3em $fontHeader;
+  font: 5vh $fontHeader;
   color: $primaryColor;
 }
 
 h3 {
-	font: 1.5em $fontHeader;
+	font: 3vh $fontHeader;
 	color: $darkColor;
 }
 
 body {
-	/* Generated with http://gradient.quasi.ink */
-	background-size: cover;
-	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAYklEQVQIWwFXAKj/AVouWv8f/A4AOggYACcODwD66ucA1/fnALgP9QABpjl8/xj6AwAI5OgAFgYAAAb/+gDuHQ8AkvTeAAHDHHP/Chf0AAYK7AAaEBUA7eb8ALbo8ADKFvsAf9Ehnd0nrw0AAAAASUVORK5CYII=");
-  color: $primaryColor;
-	font: 1em $fontBody;
+	background-color: #111;
+	color: $primaryColor;
+	font: 1.5vh $fontBody;
 }
 
 a {
