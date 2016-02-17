@@ -1,5 +1,5 @@
 module.exports = function(app) {
-	app.directive('heading', function() {
+	app.directive('analytics', function() {
 		return {
 			restrict: 'C',
       replace: true,

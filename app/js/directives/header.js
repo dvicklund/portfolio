@@ -1,7 +1,7 @@
 module.exports = function(app) {
 	app.directive('heading', function() {
 		return {
-			restrict: 'EAC',
+			restrict: 'C',
 			templateUrl: 'templates/header.html',
 			scope: {
 				headingText: '='

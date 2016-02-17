@@ -42,7 +42,7 @@ function scaleBannerVideoSize(element){
     videoWidth,
     videoHeight;
 
-    console.log(windowHeight);
+    // console.log(windowHeight);
 
     $(element).each(function(){
         var videoAspectRatio = $(this).data('height')/$(this).data('width');

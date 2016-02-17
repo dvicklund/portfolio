@@ -29091,7 +29091,9 @@
 	module.exports = function(app) {
 		__webpack_require__(4)(app);
 		__webpack_require__(5)(app);
+		__webpack_require__(6)(app);
 	};
+
 
 /***/ },
 /* 4 */
@@ -29100,7 +29102,7 @@
 	module.exports = function(app) {
 		app.directive('heading', function() {
 			return {
-				restrict: 'EAC',
+				restrict: 'C',
 				templateUrl: 'templates/header.html',
 				scope: {
 					headingText: '='
@@ -29108,6 +29110,7 @@
 			};
 		});
 	};
+
 
 /***/ },
 /* 5 */
@@ -29118,6 +29121,21 @@
 			return {
 				restrict: 'EC',
 				templateUrl: 'templates/welcome.html',
+			};
+		});
+	};
+
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	module.exports = function(app) {
+		app.directive('analytics', function() {
+			return {
+				restrict: 'C',
+	      replace: true,
+				templateUrl: 'templates/analytics.html',
 			};
 		});
 	};
