@@ -45,11 +45,27 @@
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" href="style.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 		<script src="bundle.js"></script>
+		<script src="coverr.js"></script>
 	</head>
 	<body data-ng-app="PortApp">
 		<main>
 			<header class="heading"></header>
+
+			<div class="homepage-hero-module">
+			    <div class="video-container">
+			        <div class="filter"></div>
+			        <video autoplay loop class="fillWidth">
+			            <source src="res/Aloha-Mundo.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+			            <source src="res/Aloha-Mundo.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+			        </video>
+			        <div class="poster hidden">
+			            <img src="res/Aloha-Mundo.jpg" alt="background image (oh noes!)">
+			        </div>
+			    </div>
+			</div>
+
 			<section></section>
 			<welcome></welcome>
 		</main>
