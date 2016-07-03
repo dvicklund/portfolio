@@ -98,6 +98,15 @@ welcome {
   margin: 2vh 20vw;
   border-radius: 3vh; }
 
+#starContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  opacity: 0.5; }
+
 a:hover {
   text-decoration: overline underline;
   color: #2fa; }

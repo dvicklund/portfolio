@@ -30,6 +30,8 @@ gulp.task('build:html', function() {
 });
 
 gulp.task('build:js', function() {
+  gulp.src('app/js/starfield.js').pipe(gulp.dest('build/'))
+
   return gulp.src('app/js/entry.js')
   .pipe(webpack({
     output: {
@@ -58,4 +60,4 @@ gulp.task('watch:js', function() {
 gulp.task('build:all', ['build:css', 'build:html', 'build:js']);
 gulp.task('test:all', ['test:mocha']);
 gulp.task('watch:all', ['watch:css', 'watch:html', 'watch:js']);
-gulp.task('default', ['build:all']);
+gulp.task('default', ['build:all', 'watch:all']);
