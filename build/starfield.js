@@ -16,9 +16,10 @@ function Starfield() {
   this.height = 0;
   this.minVelocity = 20;
   this.maxVelocity = 70;
-  this.starCount = 151;
+  this.starCount = 1000;
   this.stars = [];
   this.intervalId = 0;
+  this.starMaxSize = 4;
 }
 
 Starfield.prototype.init = function(div) {
@@ -49,7 +50,7 @@ Starfield.prototype.start = function() {
   for(var star = 0; star < this.starCount; star++) {
     stars[star] = new Star(Math.random() * this.width,
                            Math.random() * this.height,
-                           Math.random() * 3 + 1,
+                           Math.random() * this.starMaxSize + 1 + 8 * Math.floor(Math.random() * 1.01),
                            (Math.random() * (this.maxVelocity - this.minVelocity)) + this.minVelocity,
                            starColors[Math.floor(Math.random() * colorCount)])
   }
@@ -71,7 +72,7 @@ Starfield.prototype.update = function() {
     if(star.y > this.height) {
       this.stars[i] = new Star(Math.random() * this.width,
                                0,
-                               Math.random() * 3 + 1,
+                               Math.random() * this.starMaxSize + 1 + 8 * Math.floor(Math.random() * 1.01),
                                (Math.random() * (this.maxVelocity - this.minVelocity)) + this.minVelocity,
                                starColors[Math.floor(Math.random() * colorCount)])
     }
