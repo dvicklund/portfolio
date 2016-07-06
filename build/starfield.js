@@ -69,9 +69,9 @@ Starfield.prototype.update = function() {
   for(var i = 0; i < this.stars.length; i++) {
     var star = this.stars[i]
     star.y += dt * star.velocity
-    if(star.y > this.height) {
+    if(star.y > this.height + star.size) {
       this.stars[i] = new Star(Math.random() * this.width,
-                               0,
+                               -star.size,
                                Math.random() * this.starMaxSize + 1 + 8 * Math.floor(Math.random() * 1.01),
                                (Math.random() * (this.maxVelocity - this.minVelocity)) + this.minVelocity,
                                starColors[Math.floor(Math.random() * colorCount)])
