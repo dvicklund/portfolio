@@ -32,26 +32,26 @@ table {
 
 h1 {
   font: 5vh Courier, serif;
-  color: limegreen; }
+  color: white; }
 
 h3 {
   font: 3vh Courier, serif;
-  color: #070; }
+  color: #ccc; }
 
 body {
   background-color: #111;
-  color: limegreen;
+  color: white;
   font: 1.5vh Courier, sans-serif; }
 
 a {
   text-decoration: none;
-  color: #0f0; }
+  color: #bfb; }
 
 .heading {
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.7); }
 
 welcome {
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.7); }
 
 body {
   height: 100vh;
@@ -106,6 +106,10 @@ welcome {
   top: 0px;
   z-index: -1;
   opacity: 0.5; }
+
+br {
+  position: absolute;
+  margin-top: 5em; }
 
 a:hover {
   text-decoration: overline underline;
