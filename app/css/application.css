@@ -107,10 +107,6 @@ welcome {
   z-index: -1;
   opacity: 0.5; }
 
-br {
-  position: absolute;
-  margin-top: 5em; }
-
 a:hover {
   text-decoration: overline underline;
   color: #2fa; }
