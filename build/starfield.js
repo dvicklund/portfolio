@@ -1,4 +1,4 @@
-var starColors = ['#FF2000', '#FFD700', '#800000', '#00FFFF', '#FFFFE0', '#FF8C00'];
+var starColors = ['rgba(255, 32, 0, 1.0)', 'rgba(255, 215, 0, 1.0)', 'rgba(128, 0, 0, 1.0)', 'rgba(0, 255, 255, 1.0)', 'rgba(255, 255, 224, 1.0)', 'rgba(255, 140, 0, 1.0)'];
 var colorCount = starColors.length;
 
 function Star(x, y, size, velocity, color) {
@@ -66,9 +66,7 @@ Starfield.prototype.start = function() {
 
 Starfield.prototype.update = function() {
   var dt = 1/this.fps
-
   this.sortStarsByVelocity()
-
   for(var i = 0; i < this.stars.length; i++) {
     var star = this.stars[i]
     star.y += dt * star.velocity
@@ -84,15 +82,12 @@ Starfield.prototype.update = function() {
 
 Starfield.prototype.updateHorizontal = function() {
   var dt = 1/this.fps
-
   this.sortStarsByVelocity()
-
   for(var i = 0; i < this.stars.length; i++) {
     var star = this.stars[i]
-    star.x += dt * star.velocity
-    if(star.x > this.width + star.size) {
-      console.log('look at this.stars');
-      this.stars[i] = new Star(-star.size,
+    star.x -= dt * star.velocity
+    if(star.x < -star.size) {
+      this.stars[i] = new Star(star.size + this.width,
                               Math.random() * this.height,
                               Math.random() * this.starMaxSize + 1 + 8 * Math.floor(Math.random() * 1.01),
                               (Math.random() * (this.maxVelocity - this.minVelocity)) + this.minVelocity,
@@ -117,9 +112,16 @@ Starfield.prototype.draw = function() {
 
   for(var i = 0; i < this.stars.length; i++) {
     var star = this.stars[i]
-    ctx.fillStyle = star.color
+    var gradient = ctx.createRadialGradient(star.x, star.y, 0, star.x, star.y, star.size)
+    gradient.addColorStop(0, star.color)
+    gradient.addColorStop(0.2, star.color)
+    var transColor1 = star.color.substring(0, star.color.length - 4) + '0.2)'
+    var transColor2 = star.color.substring(0, star.color.length - 4) + '0)'
+    gradient.addColorStop(0.3, transColor1)
+    gradient.addColorStop(1, transColor2)
+    ctx.fillStyle = gradient
     ctx.beginPath()
-    ctx.arc(star.x, star.y, star.size, 0, 2 * Math.PI)
+    ctx.arc(star.x, star.y, star.size*2, 0, 2 * Math.PI)
     ctx.fill()
   }
 }
