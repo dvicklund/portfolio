@@ -6,7 +6,7 @@ $fontHeader: Courier, serif;
 $fontBody: Courier, sans-serif;
 
 h1 {
-  font: 5vh $fontHeader;
+  font: 8vh $fontHeader;
   color: $primaryColor;
 }
 
@@ -18,7 +18,7 @@ h3 {
 body {
 	background-color: #111;
 	color: $primaryColor;
-	font: 1.5vh $fontBody;
+	font: 2.2vh $fontBody;
 }
 
 a {

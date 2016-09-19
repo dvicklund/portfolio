@@ -31,7 +31,7 @@ table {
   border-spacing: 0; }
 
 h1 {
-  font: 5vh Courier, serif;
+  font: 8vh Courier, serif;
   color: white; }
 
 h3 {
@@ -41,7 +41,7 @@ h3 {
 body {
   background-color: #111;
   color: white;
-  font: 1.5vh Courier, sans-serif; }
+  font: 2.2vh Courier, sans-serif; }
 
 a {
   text-decoration: none;

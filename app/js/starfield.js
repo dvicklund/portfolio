@@ -45,7 +45,7 @@ Starfield.prototype.init = function(div) {
 }
 
 Starfield.prototype.start = function() {
-  var stars = [];
+  var stars = []
 
   for(var star = 0; star < this.starCount; star++) {
     stars[star] = new Star(Math.random() * this.width,
@@ -55,17 +55,20 @@ Starfield.prototype.start = function() {
                            starColors[Math.floor(Math.random() * colorCount)])
   }
 
-  this.stars = stars;
+  this.stars = stars
 
-  var self = this;
+  var self = this
   this.intervalId = setInterval(function() {
-    self.update()
+    self.updateHorizontal()
     self.draw()
   }, 1000 / this.fps)
 }
 
 Starfield.prototype.update = function() {
-  var dt = 1/this.fps;
+  var dt = 1/this.fps
+
+  this.sortStarsByVelocity()
+
   for(var i = 0; i < this.stars.length; i++) {
     var star = this.stars[i]
     star.y += dt * star.velocity
@@ -77,6 +80,33 @@ Starfield.prototype.update = function() {
                                starColors[Math.floor(Math.random() * colorCount)])
     }
   }
+}
+
+Starfield.prototype.updateHorizontal = function() {
+  var dt = 1/this.fps
+
+  this.sortStarsByVelocity()
+
+  for(var i = 0; i < this.stars.length; i++) {
+    var star = this.stars[i]
+    star.x += dt * star.velocity
+    if(star.x > this.width + star.size) {
+      console.log('look at this.stars');
+      this.stars[i] = new Star(-star.size,
+                              Math.random() * this.height,
+                              Math.random() * this.starMaxSize + 1 + 8 * Math.floor(Math.random() * 1.01),
+                              (Math.random() * (this.maxVelocity - this.minVelocity)) + this.minVelocity,
+                              starColors[Math.floor(Math.random() * colorCount)])
+    }
+  }
+}
+
+Starfield.prototype.sortStarsByVelocity = function() {
+  this.stars.sort(function(a, b) {
+    if(a.velocity > b.velocity) return 1
+    if(a.velocity < b.velocity) return -1
+    else return 0
+  })
 }
 
 Starfield.prototype.draw = function() {
