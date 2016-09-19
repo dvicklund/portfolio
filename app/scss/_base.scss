@@ -21,6 +21,10 @@ body {
 	font: 2.2vh $fontBody;
 }
 
+sup {
+  font: 1.3vh $fontBody;
+}
+
 a {
   text-decoration: none;
   color: $secondaryColor;
