@@ -1,4 +1,11 @@
-const starColors = ['rgba(255,32,0,1.0)', 'rgba(255,215,0,1.0)', 'rgba(128,0,0,1.0)', 'rgba(0,255,255,1.0)', 'rgba(255,255,224,1.0)', 'rgba(255,140,0,1.0)'];
+const starColors = ['rgba(128,160,0,1.0)',
+                    'rgba(160,215,0,1.0)',
+                    'rgba(0,255,255,1.0)',
+                    'rgba(255,255,224,1.0)',
+                    'rgba(255,255,224,1.0)',
+                    'rgba(255,255,224,1.0)',
+                    'rgba(164,90,0,1.0)',
+                    'rgba(16,0,0,1.0)'];
 const starGrads = [];
 const colorCount = starColors.length;
 
@@ -40,9 +47,9 @@ function Starfield() {
   this.hidCtx = null;
   this.width = 0;
   this.height = 0;
-  this.minVelocity = 2;
+  this.minVelocity = 5;
   this.maxVelocity = 100;
-  this.starCount = 2000;
+  this.starCount = 1000;
   this.stars = [];
   this.intervalId = 0;
   this.starMaxSize = 5;
@@ -76,7 +83,7 @@ Starfield.prototype.init = function(div) {
 
   if(this.height < 600) this.starCount = 400
   else if(this.height < 800) this.starCount = 600
-  else this.starCount = 2000
+  else this.starCount = 1000
 
   window.addEventListener('resize', function resize(event) {
     self.width = window.innerWidth;
@@ -169,7 +176,7 @@ Starfield.prototype.draw = function(context) {
   // context.fillStyle = '#000000'
   // context.fillRect(0, 0, this.width, this.height)
   context.fillStyle = '#000000'
-  context.fillRect(0, 0, 5, this.height)
+  context.fillRect(0, 0, 1, this.height)
 
   for(var i = 0; i < this.stars.length; i++) {
     var star = this.stars[i]
@@ -189,9 +196,9 @@ Starfield.prototype.draw = function(context) {
     var transColor2 = star.color.substring(0, star.color.length - 4) + '0)'
     gradient.addColorStop(1, transColor2)
     context.fillStyle = gradient
-    // context.beginPath()
-    // context.arc(star.x, star.y, star.size*2, 0, 2 * Math.PI)
-    // context.fill()
-    context.fillRect(star.x - star.size, star.y - star.size, star.size*2, star.size*2)
+    context.beginPath()
+    context.arc(star.x, star.y, star.size*2, 0, 2 * Math.PI)
+    context.fill()
+    // context.fillRect(star.x - star.size, star.y - star.size, star.size*2, star.size*2)
   }
 }
