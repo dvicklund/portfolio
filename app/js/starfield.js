@@ -42,7 +42,7 @@ function Starfield() {
   this.height = 0;
   this.minVelocity = 2;
   this.maxVelocity = 100;
-  this.starCount = 1000;
+  this.starCount = 2000;
   this.stars = [];
   this.intervalId = 0;
   this.starMaxSize = 5;
@@ -74,6 +74,10 @@ Starfield.prototype.init = function(div) {
   this.hidCtx.fillStyle = 'black'
   this.hidCtx.fillRect(0, 0, this.width, this.height)
 
+  if(this.height < 600) this.starCount = 400
+  else if(this.height < 800) this.starCount = 600
+  else this.starCount = 2000
+
   window.addEventListener('resize', function resize(event) {
     self.width = window.innerWidth;
     self.height = window.innerHeight;
@@ -81,6 +85,8 @@ Starfield.prototype.init = function(div) {
     self.canvas.height = self.height;
     self.hidCanvas.width = self.width;
     self.hidCanvas.height = self.height;
+    self.hidCtx.fillStyle = 'black'
+    self.hidCtx.fillRect(0, 0, self.width, self.height)
     self.draw(self.hidCtx);
     self.render()
   })
@@ -116,7 +122,7 @@ Starfield.prototype.start = function() {
 
 Starfield.prototype.update = function() {
   var dt = 1/this.fps
-  // this.sortStarsByVelocity()
+  this.sortStarsByVelocity()
   for(var i = 0; i < this.stars.length; i++) {
     var star = this.stars[i]
     star.y += dt * star.velocity
@@ -169,10 +175,12 @@ Starfield.prototype.draw = function(context) {
     var star = this.stars[i]
 
     context.fillStyle = '#000000'
-    if(star.size < 1.5) {
-      context.fillRect(star.lastX - star.size*4, star.y - star.size*4, star.size*8, star.size*8)
+    if(star.size < 0.5) {
+      context.fillRect(star.lastX - star.size*4, star.y - star.size*2, star.size*8, star.size*4)
+    } else if(star.size < 1) {
+      context.fillRect(star.lastX - star.size*2, star.y - star.size*2, star.size*4, star.size*4)
     } else {
-      context.fillRect(star.lastX - star.size, star.y - star.size, star.size*2, star.size*2)
+      context.fillRect(star.lastX - star.size, star.y - star.size, star.size*3, star.size*2)
     }
 
     var gradient = context.createRadialGradient(star.x, star.y, 0, star.x, star.y, star.size)
