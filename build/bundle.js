@@ -50,7 +50,7 @@
 	var portApp = angular.module('PortApp', []);
 
 	__webpack_require__(2)(portApp);
-	__webpack_require__(3)(portApp);
+	__webpack_require__(6)(portApp);
 
 
 /***/ },
@@ -31828,20 +31828,24 @@
 
 /***/ },
 /* 2 */
-/***/ function(module, exports) {
-
-	module.exports = function(app) {
-		// require('folder/controller')(app)
-	};
-
-/***/ },
-/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(app) {
-		__webpack_require__(4)(app);
-		__webpack_require__(5)(app);
-		__webpack_require__(6)(app);
+		// require('folder/controller')(app)
+		__webpack_require__(3)(app)
+		__webpack_require__(4)(app)
+		__webpack_require__(5)(app)
+	};
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	module.exports = function(app) {
+		app.controller('projectsController', ['$scope', function($scope) {
+	    $scope.project = 'Something about productivity'
+	  }]);
 	};
 
 
@@ -31850,9 +31854,54 @@
 /***/ function(module, exports) {
 
 	module.exports = function(app) {
+		app.controller('headerController', ['$scope', '$window', function($scope, $window) {
+			$scope.scrollPos = 0;
+
+			$window.onscroll = function() {
+				$scope.scrollPos = document.body.scrollTop || document.documentElement.scrollTop || 0
+				$scope.$digest()
+			}
+		}]);
+	};
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	module.exports = function(app) {
+		app.controller('welcomeController', ['$scope', '$window', function($scope, $window) {
+			$scope.scrollPos = 0;
+
+			$window.onscroll = function() {
+				$scope.scrollPos = document.body.scrollTop || document.documentElement.scrollTop || 0
+				$scope.$digest()
+			}
+		}]);
+	};
+
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = function(app) {
+		__webpack_require__(7)(app);
+		__webpack_require__(8)(app);
+		__webpack_require__(9)(app);
+		__webpack_require__(10)(app);
+	};
+
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	module.exports = function(app) {
 		app.directive('heading', function() {
 			return {
 				restrict: 'C',
+				controller: 'headerController',
 				templateUrl: 'templates/header.html',
 				scope: {
 					headingText: '='
@@ -31863,7 +31912,7 @@
 
 
 /***/ },
-/* 5 */
+/* 8 */
 /***/ function(module, exports) {
 
 	module.exports = function(app) {
@@ -31877,7 +31926,22 @@
 
 
 /***/ },
-/* 6 */
+/* 9 */
+/***/ function(module, exports) {
+
+	module.exports = function(app) {
+		app.directive('projects', function() {
+			return {
+				restrict: 'EC',
+	      controller: 'projectsController',
+				templateUrl: 'templates/projects.html'
+			};
+		});
+	};
+
+
+/***/ },
+/* 10 */
 /***/ function(module, exports) {
 
 	module.exports = function(app) {

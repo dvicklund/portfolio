@@ -1,5 +1,5 @@
 module.exports = function(app) {
-	app.controller('headerController', ['$scope', '$window', function($scope, $window) {
+	app.controller('welcomeController', ['$scope', '$window', function($scope, $window) {
 		$scope.scrollPos = 0;
 
 		$window.onscroll = function() {
