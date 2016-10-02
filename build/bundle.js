@@ -29128,8 +29128,13 @@
 				}, {
 					name: 'Game of Life Clone',
 					desc: 'A tribute to the great Game of Life algorithm',
-					url: 'http://gameoflifedv.herokuapp.com',
+					url: 'https://gameoflifedv.herokuapp.com',
 					img: 'http://i.imgur.com/uKEOi0l.png'
+				}, {
+					name: 'WikiTabs',
+					desc: 'The simplest possible guitar tab website, created mostly for my own personal use',
+					url: 'https://wikitab.herokuapp.com',
+					img: 'http://i.imgur.com/ypU8RIX.png'
 				}
 			]
 	  }]);
