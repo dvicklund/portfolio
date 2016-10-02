@@ -8,7 +8,7 @@ module.exports = function(app) {
 				img: 'http://i.imgur.com/1Pz6a6w.png'
 			}, {
 				name: 'Photons Website',
-				desc: 'Band website for Seattle group Photons',
+				desc: 'Band website for Seattle indie rock group Photons',
 				url: 'http://www.photons.rocks/',
 				img: 'http://i.imgur.com/HN9iuZL.png'
 			}, {

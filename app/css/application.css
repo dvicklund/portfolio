@@ -858,6 +858,7 @@ body {
   overflow-x: hidden; }
 
 main {
+  width: 100%;
   position: absolute;
   text-align: center;
   padding: 0 1vw 1.5vh 1vw;
@@ -892,6 +893,24 @@ welcome {
   padding: 1vh;
   border-radius: 2vh;
   z-index: 0; }
+
+#projectsContainer {
+  margin-top: 50vh; }
+
+.projectCard {
+  max-height: 25vh;
+  overflow: hidden;
+  margin-top: 10vh;
+  padding-right: 2vw;
+  border-radius: 20px;
+  background-color: rgba(20, 20, 20, 0.4); }
+
+.projectName {
+  text-align: right;
+  padding-top: 2vh; }
+
+.projectDescription {
+  text-align: left; }
 
 #starContainer {
   width: 100%;
