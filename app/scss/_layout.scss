@@ -50,6 +50,7 @@ welcome {
 
 #projectsContainer {
 	margin-top: 50vh;
+	margin-bottom: 10vh;
 }
 
 .projectCard {
@@ -58,7 +59,9 @@ welcome {
 	margin-top: 10vh;
 	padding-right: 2vw;
 	border-radius: 20px;
-	background-color: rgba(20, 20, 20, 0.4);
+	box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.0);
+	background-color: rgba(20, 20, 20, 0);
+	transition: box-shadow 0.5s, background-color 0.5s;
 }
 
 .projectName {

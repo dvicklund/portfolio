@@ -895,7 +895,8 @@ welcome {
   z-index: 0; }
 
 #projectsContainer {
-  margin-top: 50vh; }
+  margin-top: 50vh;
+  margin-bottom: 10vh; }
 
 .projectCard {
   max-height: 25vh;
@@ -903,7 +904,9 @@ welcome {
   margin-top: 10vh;
   padding-right: 2vw;
   border-radius: 20px;
-  background-color: rgba(20, 20, 20, 0.4); }
+  box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
+  background-color: rgba(20, 20, 20, 0);
+  transition: box-shadow 0.5s, background-color 0.5s; }
 
 .projectName {
   text-align: right;
@@ -940,6 +943,10 @@ a:hover {
 #mainView {
   position: sticky;
   top: 110vh; }
+
+.projectCard:hover {
+  background-color: rgba(50, 50, 50, 0.5);
+  box-shadow: 0px 0px 15px 1px rgba(255, 255, 255, 0.2); }
 
 .box-shadow {
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
