@@ -181,10 +181,10 @@ Starfield.prototype.draw = function(context) {
     var star = this.stars[i]
 
     context.fillStyle = '#000000'
-    if(star.size<=1.5) {
-      context.fillRect(Math.floor(star.lastX - 2), Math.floor(star.y - 2), 4, 4)
+    if(star.size<=4) {
+      context.fillRect(Math.floor(star.lastX - 4), Math.floor(star.y - 4), 8, 8)
     } else {
-      context.fillRect(Math.floor(star.lastX - star.size), Math.floor(star.y - star.size), Math.floor(star.size*3), Math.floor(star.size*3))
+      context.fillRect(Math.floor(star.lastX - star.size*1.6), Math.floor(star.y - star.size*1.6), Math.floor(star.size*3), Math.floor(star.size*3))
     }
 
     var gradient = context.createRadialGradient(star.x, star.y, 0, star.x, star.y, star.size)
