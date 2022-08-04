@@ -9,7 +9,7 @@ module.exports = function(app) {
 			}, {
 				name: 'Photons Website',
 				desc: 'Band website for Seattle indie rock group Photons',
-				url: 'http://www.photons.rocks/',
+				url: 'https://photons.herokuapp.com/',
 				img: 'http://i.imgur.com/HN9iuZL.png'
 			}, {
 				name: 'Where Not To Walk Your Dog',

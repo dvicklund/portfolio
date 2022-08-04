@@ -1,6 +1,6 @@
 {
   "name": "vicklund-portfolio",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A professional showcase of excellence featuring David",
   "main": "server.js",
   "directories": {
@@ -21,15 +21,15 @@
   "homepage": "https://github.com/dvicklund/portfolio#readme",
   "devDependencies": {
     "angular": "^1.4.8",
-    "gulp": "^3.9.0",
-    "gulp-concat-css": "^2.2.0",
+    "gulp": "^4.0.2",
+    "gulp-concat-css": "^3.1.0",
     "gulp-minify-css": "^1.2.3",
-    "gulp-mocha": "^2.2.0",
-    "gulp-sass": "^2.1.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "webpack-stream": "^3.1.0"
+    "gulp-mocha": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.18.1"
   }
 }
