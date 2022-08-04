@@ -28,8 +28,8 @@ module.exports = function(app) {
 				img: 'http://i.imgur.com/TOUhbH9.png'
 			}, {
 				name: 'FasterBids Account Viz',
-				desc: 'Data visualization suite for the proprietary FasterBids platform',
-				url: 'http://fasterbids.com/',
+				desc: 'Data visualization suite for the proprietary FasterBids platform (now defunct)',
+				url: 'https://web.archive.org/web/20171008012300/http://fasterbids.com/',
 				img: 'http://i.imgur.com/ChqUyFo.png'
 			}, {
 				name: 'Game of Life Clone',
