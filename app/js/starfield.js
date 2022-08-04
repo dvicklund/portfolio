@@ -85,7 +85,7 @@ Starfield.prototype.init = function(div) {
 
   if(this.height < 600) this.starCount = 200
   else if(this.height < 800) this.starCount = 300
-  else this.starCount = 600
+  else this.starCount = 500
 
   window.addEventListener('resize', function resize(event) {
     self.width = window.innerWidth;
