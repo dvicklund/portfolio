@@ -8,6 +8,8 @@ const starColors = ['rgba(128,160,0,1.0)',
                     'rgba(16,0,0,1.0)'];
 const starGrads = [];
 const colorCount = starColors.length;
+const starSpeed = 1.6;
+const starScale = 3;
 
 let lastTimestamp = 0;
 
@@ -81,9 +83,9 @@ Starfield.prototype.init = function(div) {
   this.hidCtx.fillStyle = 'black'
   this.hidCtx.fillRect(0, 0, this.width, this.height)
 
-  if(this.height < 600) this.starCount = 400
-  else if(this.height < 800) this.starCount = 600
-  else this.starCount = 1000
+  if(this.height < 600) this.starCount = 200
+  else if(this.height < 800) this.starCount = 300
+  else this.starCount = 600
 
   window.addEventListener('resize', function resize(event) {
     self.width = window.innerWidth;
@@ -184,7 +186,7 @@ Starfield.prototype.draw = function(context) {
     if(star.size<=4) {
       context.fillRect(Math.floor(star.lastX - 4), Math.floor(star.y - 4), 8, 8)
     } else {
-      context.fillRect(Math.floor(star.lastX - star.size*1.6), Math.floor(star.y - star.size*1.6), Math.floor(star.size*3), Math.floor(star.size*3))
+      context.fillRect(Math.floor(star.lastX - star.size*starSpeed), Math.floor(star.y - star.size*starSpeed), Math.floor(star.size*starScale), Math.floor(star.size*starScale))
     }
 
     var gradient = context.createRadialGradient(star.x, star.y, 0, star.x, star.y, star.size)
