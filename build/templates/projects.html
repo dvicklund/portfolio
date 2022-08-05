@@ -3,7 +3,7 @@
   <q>Look, ma, I made some stuff!</q>
   <article class="row projectCard" data-ng-repeat="project in projects">
     <a href="{{project.url}}">
-    <img class="one-third column" src="{{project.img}}">
+    <img class="one-third column" ng-src="{{project.img}}">
     <div class="two-thirds column container">
       <h3 class="row projectName">{{project.name}}</a></h3>
       <p class="row projectDescription">

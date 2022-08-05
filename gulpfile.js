@@ -32,7 +32,12 @@ function js() {
     src(paths.jsStarfield).pipe(dest('build/'))
 
     return src(paths.jsEntry)
-        .pipe(webpack({output: {filename: 'bundle.js'}}))
+        .pipe(webpack({
+            mode: "production",
+            output: {
+                filename: 'bundle.js'
+            }
+        }))
         .pipe(dest('build/'))
         
 }
