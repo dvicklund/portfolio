@@ -20,12 +20,15 @@ write_files:
       }
 runcmd:
   # install Node.js
-  - 'curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -'
-  - 'sudo apt-get install -y nodejs'
+  - 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash'
+  - 'source ~/.bashrc'
+  - 'nvm i 16 --lts'
   # clone github repo into portfolio directory
   - 'cd /home/azureuser'
   - git clone 'https://github.com/dvicklund/portfolio.git' portfolio
   # Install pm2
   - 'sudo npm install pm2 -g'
+  # Start portfolio server
+  - 'pm2 start server.js'
   # Restart NGINX
   - service nginx restart
