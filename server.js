@@ -8,6 +8,12 @@ app.use('/projects/whereNotToWalkYourDog', express.static(path.join(__dirname, '
 
 app.use('/projects/photons', express.static(path.join(__dirname, 'build/projects/photons')))
 
+app.use('/projects/gameOfLife', express.static(path.join(__dirname, 'build/projects/gameOfLife')))
+
+app.use('/projects/tilesForDays', express.static(path.join(__dirname, 'build/projects/tilesForDays')))
+
+app.use('/projects/tabs', express.static(path.join(__dirname, 'build/projects/tabs')))
+
 var port = process.env.PORT || 3000
 
 app.listen(port, function() {

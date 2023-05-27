@@ -17,14 +17,14 @@ module.exports = function(app) {
 				url: 'projects/whereNotToWalkYourDog',
 				img: 'http://i.imgur.com/lyANBql.png'
 			}, {
-				name: 'Catch',
-				desc: 'Built for worried parents, a secure location tracker and alert system',
-				url: 'https://murmuring-springs-5499.herokuapp.com/',
-				img: 'http://i.imgur.com/4bKSszV.png'
-			}, {
+			// 	name: 'Catch',
+			// 	desc: 'Built for worried parents, a secure location tracker and alert system',
+			// 	url: 'https://murmuring-springs-5499.herokuapp.com/',
+			// 	img: 'http://i.imgur.com/4bKSszV.png'
+			// }, {
 				name: 'Tiles For Days',
 				desc: 'Little game made over Thanksgiving weekend, 2015',
-				url: 'https://tilesfordays.herokuapp.com',
+				url: 'projects/tilesForDays',
 				img: 'http://i.imgur.com/TOUhbH9.png'
 			}, {
 			// 	name: 'FasterBids Account Viz',
@@ -34,12 +34,12 @@ module.exports = function(app) {
 			// }, {
 				name: 'Game of Life Clone',
 				desc: 'A tribute to the great Game of Life algorithm',
-				url: 'https://gameoflifedv.herokuapp.com',
+				url: 'projects/gameOfLife',
 				img: 'http://i.imgur.com/uKEOi0l.png'
 			}, {
 				name: 'WikiTabs',
 				desc: 'The simplest possible guitar tab website, created mostly for my own personal use',
-				url: 'https://wikitab.herokuapp.com',
+				url: 'projects/tabs',
 				img: 'http://i.imgur.com/ypU8RIX.png'
 			}
 		]
