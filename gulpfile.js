@@ -11,6 +11,7 @@ const paths = {
     js: ['app/**/*.js'],
     jsEntry: ['app/js/entry.js'],
     jsStarfield: ['app/js/starfield.js'],
+    projects: ['projects/**/*'],
     test: ['test/testRoutes.js'],
 }
 
@@ -28,6 +29,11 @@ function html() {
         .pipe(dest('build/'))
 }
 
+function projects() {
+    return src(paths.projects)
+        .pipe(dest('build/projects'))
+}
+
 function js() {
     src(paths.jsStarfield).pipe(dest('build/'))
 
@@ -42,4 +48,4 @@ function js() {
         
 }
 
-exports.default = parallel(css, html, js);
+exports.default = parallel(css, html, js, projects);
